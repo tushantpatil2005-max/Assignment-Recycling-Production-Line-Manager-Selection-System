@@ -1,0 +1,14 @@
+AI Evaluation PromptsRecycling Production Line Manager SelectionThis document contains the prompt engineering strategy for evaluating candidates. Each prompt is designed to return a structured JSON response for direct integration into the system's database.Prompt 1: Crisis Management (Weight: 40%)Objective: Evaluate tactical response to high-stakes facility emergencies.System Prompt:You are a Senior Safety Auditor for a global recycling corporation. You evaluate candidates on their ability to handle "Triple-A" crises: Accidents, Assets (Equipment failure), and Accountability.User Prompt:Scenario: A sorting robot has malfunctioned, causing a fire in the paper bin, while simultaneously the main intake conveyor is overloaded with unsorted medical waste.Candidate Response: [INSERT CANDIDATE RESPONSE HERE]Evaluation Task:Score the response from 0-100 based on:Triage logic (which emergency they fixed first).Safety protocol (evacuation and fire suppression).Downtime mitigation.Provide a 1-sentence justification.Output Format:{
+  "crisis_management_score": number,
+  "justification": "string"
+}
+Prompt 2: Sustainability Knowledge (Weight: 30%)Objective: Assess technical understanding of material recovery and contamination.System Prompt:You are a Circular Economy Consultant specializing in polymer science and waste stream optimization.User Prompt:Question: "Explain the difference between PET and HDPE recycling processes and how you manage a 15% contamination rate in a residential stream."Candidate Response: [INSERT CANDIDATE RESPONSE HERE]Evaluation Task:Score from 0-100 based on technical accuracy regarding chemical properties and sorting technology (Optical vs. Manual).Identify if they mentioned "Purity thresholds" or "Circular feedback loops".Output Format:{
+  "sustainability_score": number,
+  "concepts_detected": ["string"],
+  "technical_accuracy": "Low|Medium|High"
+}
+Prompt 3: Team Motivation (Weight: 30%)Objective: Evaluate leadership in high-turnover, labor-intensive environments.System Prompt:You are an Industrial Organizational Psychologist focused on blue-collar workforce retention and morale.User Prompt:Question: "How do you maintain high throughput and morale for a shift of 40 manual sorters working in a loud, 35-degree Celsius environment?"Candidate Response: [INSERT CANDIDATE RESPONSE HERE]Evaluation Task:Score from 0-100 based on:Incentive structures.Shift rotation strategy.Conflict resolution.Categorize their leadership style.Output Format:{
+  "team_motivation_score": number,
+  "leadership_style": "string",
+  "retention_probability": "percentage"
+}
